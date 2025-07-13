@@ -3,299 +3,791 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>NJP's site</title>
+    <title>Narasimha Pai | AI Research & Development</title>
     <link rel="stylesheet" href="main.css">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Fira+Code:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
-    <!--navbarstarts-->
-    <nav>
+    <!-- Matrix Background -->
+    <div class="matrix-bg" id="matrix-bg"></div>
+    
+    <!-- Scan lines effect -->
+    <div class="scan-lines"></div>
+    
+    <!--navbar starts-->
+    <nav class="cyber-nav">
         <div class="container nav-container">
-            <a href="" class="logo"> NJP</a>
+            <a href="" class="logo glitch" data-text="[NJP]">[NJP]</a>
             <ul class="nav-links">
-                <li><a href="#About">About</a></li>
-                <li><a href="#Experience">Experience</a></li>
-                <li><a href="#Projects">Projects</a></li>
-                <li><a href="#Contact">Contact</a></li>
-                <li><a href="#Blog1">Blogs</a></li>
-               
-
+                <li><a href="#About" class="nav-link"><i class="fas fa-brain"></i> About</a></li>
+                <li><a href="#Experience" class="nav-link"><i class="fas fa-code"></i> Experience</a></li>
+                <li><a href="#Skills" class="nav-link"><i class="fas fa-cogs"></i> Skills</a></li>
+                <li><a href="#Contact" class="nav-link"><i class="fas fa-terminal"></i> Contact</a></li>
+                <li><a href="#Blog1" class="nav-link"><i class="fas fa-microchip"></i> Blogs</a></li>
             </ul>
-            <button id="darkModeToggle">Toggle Dark Mode</button>
+            <button id="darkModeToggle" class="cyber-btn">
+                <i class="fas fa-power-off"></i>
+            </button>
         </div>
     </nav>
-    <header>
+    <header class="cyber-header">
         <div class="container header-container">
             <div class="header-left">
-                <img src="pfp.png" alt="profile-pic" alt="">
+                <div class="profile-frame">
+                    <img src="pfp.png" alt="profile-pic" class="profile-pic">
+                    <div class="scan-effect"></div>
+                </div>
             </div>
             <div class="header-right">
-                <p><b>Hello, I'm</b></p>
-                <h1>NJP</h1>
-                <h2>Web Developer</h2>
-                <div class="header-action-aria">
-                    <a href="" class="btn" download="cv.pdf">Download my CV</a>
-                    <a href="#Contact" class="btn btn-dark">Contact info</a>
-                    <a href="cv.pdf"  class="btn" target="_blank">View my CV</a>
+                <div class="terminal-window">
+                    <div class="terminal-header">
+                        <div class="terminal-buttons">
+                            <span class="btn-close"></span>
+                            <span class="btn-minimize"></span>
+                            <span class="btn-maximize"></span>
+                        </div>
+                        <span class="terminal-title">user@cyberspace:~$</span>
+                    </div>
+                    <div class="terminal-body">
+                        <p class="terminal-line"><span class="prompt">user@neural-net:~$</span> <span class="typing-effect">whoami</span></p>
+                        <p class="glitch" data-text="NARASIMHA PAI">NARASIMHA PAI</p>
+                        <h1 class="cyber-title">AI RESEARCHER & DEVELOPER</h1>
+                        <h2 class="role-text"><span class="bracket">[</span>Machine Learning Engineer<span class="bracket">]</span></h2>
+                        <p class="terminal-line"><span class="prompt">user@neural-net:~$</span> <span class="typing-effect">./start_ai_assistant</span></p>
+                        <p class="terminal-line" style="color: var(--primary-color);">🤖 AI Assistant initialized. Type below to interact!</p>
+                        <div class="header-action-area">
+                            <a href="cv.pdf" class="cyber-btn-primary" download="cv.pdf">
+                                <i class="fas fa-download"></i> Download CV
+                            </a>
+                            <a href="#Contact" class="cyber-btn-secondary">
+                                <i class="fas fa-terminal"></i> Contact
+                            </a>
+                            <a href="cv.pdf" class="cyber-btn-outline" target="_blank">
+                                <i class="fas fa-eye"></i> View CV
+                            </a>
+                        </div>
+                        <div class="terminal-hint">
+                            <i class="fas fa-robot"></i> 
+                            Try asking me: "What is Narasimha's research focus?" or "Show me his skills"
+                        </div>
+                    </div>
                 </div>
                 <div class="header-social">
-                    <a href="https://www.linkedin.com/in/narasimha-pai-6234a2286/"><img src="Linkedin.png" class="icon1"></a>
-                    <a href="https://github.com/NJP6969"><img src="Github.png" class="icon1"></a>
-                    <a href="https://discord.com/channels/@me"><img src="Discord.png" class="icon1"></a>
-                    <a href="https://researchweb.iiit.ac.in/~narasimha.pai/"><img src="pfp.png" class="icon1"></a>
-                    <a href="https://www.instagram.com/asha._.marin/"><img src="Instagram.png" class="icon1"></a>
-                    <a href="https://codeforces.com/profile/njp6969"><img src="Codeforces.png" class="icon1"></a>
-
-                    <a href=""><img src="Reddit.png" class="icon1"></a>
-
+                    <a href="https://www.linkedin.com/in/narasimha-pai-6234a2286/" class="social-link" data-tooltip="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/NJP6969" class="social-link" data-tooltip="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://discord.com/channels/@me" class="social-link" data-tooltip="Discord">
+                        <i class="fab fa-discord"></i>
+                    </a>
+                    <a href="https://researchweb.iiit.ac.in/~narasimha.pai/" class="social-link" data-tooltip="Research">
+                        <i class="fas fa-flask"></i>
+                    </a>
+                    <a href="https://www.instagram.com/asha._.marin/" class="social-link" data-tooltip="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://codeforces.com/profile/njp6969" class="social-link" data-tooltip="Codeforces">
+                        <i class="fas fa-code"></i>
+                    </a>
+                    <a href="" class="social-link" data-tooltip="Reddit">
+                        <i class="fab fa-reddit"></i>
+                    </a>
                 </div>
             </div>
         </div>
-
     </header>
     <!--end header-->
     <!--start about-->
-    <section id="About" >
-        <p class="heading-p">Get to know more</p>
-        <h1 class="heading">About me</h1>
+    <section id="About" class="cyber-section">
+        <div class="section-header">
+            <p class="heading-p cyber-subtitle">SYSTEM.PROFILE</p>
+            <h1 class="heading cyber-heading">ABOUT_NARASIMHA.PY</h1>
+        </div>
         <div class="container about-container">
             <div class="about-left">
-                <img src="about.png" alt="">
+                <div class="holo-frame">
+                    <img src="about.png" alt="" class="about-image">
+                    <div class="holo-overlay"></div>
+                </div>
             </div>
             <div class="about-right">
                 <div class="basic-edu">
-                    <div class="edu-box">
-                        <img src="experience.png" class="icon1">
-                        <h4>Experience</h4>
-                        <p>2 years<br>
-                            Frontend dev</p>
-                    </div>
-                    <div class="edu-box">
-                        <img src="education.jpg" class="icon1">
+                    <div class="cyber-box">
+                        <div class="cyber-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
                         <h4>Education</h4>
-                        <p> Btech <br>
-                            Computer science<br>
-                            MS <br>
-                            Computational natural science</p>
+                        <p>MS by Research<br>
+                            Computational Natural Science<br>
+                            B.Tech Computer Science<br>
+                            IIIT Hyderabad</p>
+                        <div class="cyber-border"></div>
+                    </div>
+                    <div class="cyber-box">
+                        <div class="cyber-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h4>Research Focus</h4>
+                        <p>Sleep Analysis<br>
+                            Physiological Signals<br>
+                            Machine Learning<br>
+                            AI Automation</p>
+                        <div class="cyber-border"></div>
                     </div>
                 </div>
-                <p>
-                    I am a passionate and dedicated individual currently pursuing a Bachelor's and Master's degree in Computer Science and Computational Natural Science at IIITH. I am also an undergraduate researcher at Brain, cognition and computation lab.
-                    I love football.
-                </p>
+                <div class="bio-terminal">
+                    <div class="terminal-line">
+                        <span class="prompt">user@profile:~$</span> <span class="command">cat about.txt</span>
+                    </div>
+                    <p class="bio-text">
+                        AI Researcher and ML Engineer pursuing dual degrees at IIIT Hyderabad. 
+                        Currently conducting research at the Brain, Cognition and Computation Lab, 
+                        specializing in sleep analysis, physiological signal processing, and AI automation. 
+                        Passionate about developing intelligent systems that bridge neuroscience and technology.
+                        Active in competitive programming and hackathons. Football enthusiast and member of 
+                        Amateur Sports Enthusiast Club at IIITH. Previously served as School Rotary Treasurer, 
+                        organizing charitable donations to old age homes and children homes.
+                    </p>
+                    <div class="terminal-line">
+                        <span class="prompt">user@profile:~$</span> <span class="cursor">█</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
     <!--end about-->
     <!--start experience-->
-    <section id="Experience">
-
-        <a href="#Experience" class="arrow"><img src="arrow.png" alt=""></a>
+    <section id="Experience" class="cyber-section">
+        <div class="cyber-arrow">
+            <i class="fas fa-chevron-down"></i>
+        </div>
         
-        <h2>
-            <center>Skills</center>
-        </h2>
-        </p>
+        <div class="section-header">
+            <p class="heading-p cyber-subtitle">WORK.HISTORY</p>
+            <h2 class="cyber-heading">PROFESSIONAL_EXPERIENCE</h2>
+        </div>
         <div class="container experience-container">
-            <div class="experience-box">
-                <h2>Frontend development and others</h2>
-                <div class="experience">
-                    <div class="ex-div">
-                        <img src="checkmark.webp" class="icon1">
-                        <div>
-                            <h4>HTML</h4>
-                            <p>Experienced</p>
+            <div class="experience-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">July 2025</div>
+                    <div class="timeline-content">
+                        <h3>Research Intern</h3>
+                        <h4>NIMHANS, Bangalore</h4>
+                        <p>Authored research papers on sleep analysis, extracted and compared sleep metrics from Fitbit, actigraphy, and PSG data</p>
+                        <div class="tech-stack">
+                            <span class="tech">Sleep Analysis</span>
+                            <span class="tech">Data Science</span>
+                            <span class="tech">Research</span>
                         </div>
-                    </div>
-                    <div class="ex-div">
-                        <img src="checkmark.webp" class="icon1">
-                        <div>
-                            <h4>CSS</h4>
-                            <p>Experienced</p>
-                        </div>
-                    </div>
-                      <div class="ex-div">
-                        <img src="checkmark.webp" class="icon1">
-                        <div>
-                            <h4>Pytorch</h4>
-                            <p>Beginner</p>
-                        </div>
-                    </div>
-                                        
-                </div>
-            </div>
-            <div class="experience-box">
-                <p>
-                <h2> Backend development</h2>
-                </p>
-                <div class="ex-div">
-                    <img src="checkmark.webp" class="icon1">
-                    <div>
-                        <h4>JS</h4>
-                        <p>Limited proficiency</p>
-                    </div>
-                </div>
-
-                <div class="ex-div">
-                    <img src="checkmark.webp" class="icon1">
-                    <div>
-                        <h4>C</h4>
-                        <p>Experienced</p>
-                    </div>
-                </div>
-                <div class="ex-div">
-                    <img src="checkmark.webp" class="icon1">
-                    <div>
-                        <h4>c++</h4>
-                        <p>Experienced</p>
-                    </div>
-                </div>
-                <div class="ex-div">
-                    <img src="checkmark.webp" class="icon1">
-                    <div>
-                        <h4>Python</h4>
-                        <p>Limited proficiency</p>
-                    </div>
-                </div>
-            </div>
-            
-               
-                </p>
-            <div class="experience-box">
-                <p>
-                <h2> Achievements</h2>
-                </p>
-                <div class="ex-div">
-                    <img src="checkmark.webp" class="icon1">
-                    <div>
-                        <h4>UGEE</h4>
-                        <p>AIR 114</p>
-                    </div>
-                </div>
-
-                <div class="ex-div">
-                    <img src="checkmark.webp" class="icon1">
-                    <div>
-                        <h4>Bangalore 10k run</h4>
-                        <p>First in Under 18</p>
-                    </div>
-                </div>
-                <div class="ex-div">
-                    <img src="checkmark.webp" class="icon1">
-                    <div>
-                        <h4>Travelling</h4>
-                        <p>Been to over 15 countries(isn't really an achievement)</p>
                     </div>
                 </div>
                 
+                <div class="timeline-item">
+                    <div class="timeline-date">May - June 2025</div>
+                    <div class="timeline-content">
+                        <h3>AI Agent Automation Intern</h3>
+                        <h4>MontyCloud, Bangalore</h4>
+                        <p>Developed and deployed AI-driven agents using AWS services, MS Teams tools and Jira APIs to automate customer success workflows</p>
+                        <div class="tech-stack">
+                            <span class="tech">AWS</span>
+                            <span class="tech">AI Agents</span>
+                            <span class="tech">Jira APIs</span>
+                            <span class="tech">MS Teams</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">Jan - April 2025</div>
+                    <div class="timeline-content">
+                        <h3>Software Developer</h3>
+                        <h4>CoralComp</h4>
+                        <p>Developed, trained and hosted a Weather prediction application for pilots and ATC using METAR data</p>
+                        <div class="tech-stack">
+                            <span class="tech">Machine Learning</span>
+                            <span class="tech">Weather Data</span>
+                            <span class="tech">Aviation</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">Oct 2024 - Present</div>
+                    <div class="timeline-content">
+                        <h3>Undergraduate Researcher</h3>
+                        <h4>Brain, Cognition and Computation Lab, IIITH</h4>
+                        <p>Working on physiological signals and ML models to detect sleep disorders</p>
+                        <div class="tech-stack">
+                            <span class="tech">ML/AI</span>
+                            <span class="tech">Signal Processing</span>
+                            <span class="tech">Sleep Research</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">Oct 2024 - Present</div>
+                    <div class="timeline-content">
+                        <h3>Problem Setter, Marketing, Logistics</h3>
+                        <h4>Hacking Club, IIITH</h4>
+                        <p>Set problems for CTF events, handle logistics, design and marketing</p>
+                        <div class="tech-stack">
+                            <span class="tech">CTF</span>
+                            <span class="tech">Problem Design</span>
+                            <span class="tech">Marketing</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">Oct 2024 - Present</div>
+                    <div class="timeline-content">
+                        <h3>Member</h3>
+                        <h4>Amateur Sports Enthusiast Club, IIITH</h4>
+                        <p>Active member and football enthusiast, participating in sports activities and club events</p>
+                        <div class="tech-stack">
+                            <span class="tech">Football</span>
+                            <span class="tech">Sports</span>
+                            <span class="tech">Team Activities</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2019 - 2021</div>
+                    <div class="timeline-content">
+                        <h3>School Rotary Treasurer</h3>
+                        <h4>Community Service</h4>
+                        <p>Organized and managed donations of clothes and supplies to old age homes and children homes</p>
+                        <div class="tech-stack">
+                            <span class="tech">Leadership</span>
+                            <span class="tech">Community Service</span>
+                            <span class="tech">Organization</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            
-
-            
-
         </div>
-
-
     </section>
     <!--end exp section-->
-    <!--start projects-->
-    <section id="Projects">
-        <a href="#Projects" class="arrow"><img src="arrow.png" alt="" class="icon1"></a>
-        <p class="heading-p">Some of my recents<br></p>
-        <h1 class="heading">Projects</h1>
-        <div class="container project-container">
-            <div class="project">
-                <img src="project1.png" alt="">
-                <h3>Project 1</h3>
-                <div class="header-action-aria">
-                    <a href="https://github.com/NJP6969/issas1" class="btn">Github</a>
-                    <a href="" class="btn">Live demo</a>
+    <!--start skills-->
+    <section id="Skills" class="cyber-section">
+        <div class="cyber-arrow">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        
+        <div class="section-header">
+            <p class="heading-p cyber-subtitle">TECH.STACK</p>
+            <h2 class="cyber-heading">TECHNICAL_SKILLS</h2>
+        </div>
+        <div class="container skills-container">
+            <div class="skill-category">
+                <div class="category-header">
+                    <i class="fas fa-brain"></i>
+                    <h2>AI & Machine Learning</h2>
+                </div>
+                <div class="skill-grid">
+                    <div class="skill-item">
+                        <div class="skill-icon">
+                            <i class="fab fa-python"></i>
+                        </div>
+                        <div class="skill-info">
+                            <h4>TensorFlow</h4>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-skill="85"></div>
+                            </div>
+                            <p>Advanced</p>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">
+                            <i class="fas fa-fire"></i>
+                        </div>
+                        <div class="skill-info">
+                            <h4>PyTorch</h4>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-skill="80"></div>
+                            </div>
+                            <p>Advanced</p>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="skill-info">
+                            <h4>Scikit-learn</h4>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-skill="90"></div>
+                            </div>
+                            <p>Expert</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="project">
-                <img src="project2.png" alt="">
-                <h3>Project 2</h3>
-                <div class="header-action-aria">
-                    <a href="https://github.com/NJP6969/issas2" class="btn">Github</a>
-                    <a href="https://researchweb.iiit.ac.in/~narasimha.pai/" class="btn">Live demo</a>
+            
+            <div class="skill-category">
+                <div class="category-header">
+                    <i class="fas fa-code"></i>
+                    <h2>Programming Languages</h2>
+                </div>
+                <div class="skill-grid">
+                    <div class="skill-item">
+                        <div class="skill-icon">
+                            <i class="fab fa-python"></i>
+                        </div>
+                        <div class="skill-info">
+                            <h4>Python</h4>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-skill="95"></div>
+                            </div>
+                            <p>Expert</p>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">
+                            <i class="fab fa-js"></i>
+                        </div>
+                        <div class="skill-info">
+                            <h4>JavaScript</h4>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-skill="80"></div>
+                            </div>
+                            <p>Advanced</p>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="skill-info">
+                            <h4>C++</h4>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-skill="85"></div>
+                            </div>
+                            <p>Advanced</p>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="skill-info">
+                            <h4>C</h4>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-skill="80"></div>
+                            </div>
+                            <p>Advanced</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="project">
-                <img src="project3.jpg" alt="">
-                <h3>Project 3</h3>
-                <div class="header-action-aria">
-                    <a href="https://github.com/NJP6969/isslab3" class="btn">Github</a>
-                    <a href="" class="btn">Live demo</a>
+            
+            <div class="skill-category">
+                <div class="category-header">
+                    <i class="fas fa-cloud"></i>
+                    <h2>Cloud & AWS Services</h2>
+                </div>
+                <div class="skill-grid">
+                    <div class="skill-item">
+                        <div class="skill-icon">
+                            <i class="fab fa-aws"></i>
+                        </div>
+                        <div class="skill-info">
+                            <h4>AWS Core Services</h4>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-skill="75"></div>
+                            </div>
+                            <p>EC2, S3, Lambda, CloudFormation</p>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="skill-info">
+                            <h4>DynamoDB & IAM</h4>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-skill="70"></div>
+                            </div>
+                            <p>NoSQL, Security Management</p>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="skill-info">
+                            <h4>API Gateway & CloudFront</h4>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-skill="70"></div>
+                            </div>
+                            <p>CDN, REST APIs</p>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">
+                            <i class="fas fa-cog"></i>
+                        </div>
+                        <div class="skill-info">
+                            <h4>Serverless & SAM</h4>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-skill="65"></div>
+                            </div>
+                            <p>Infrastructure as Code</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-
+            
+            <div class="skill-category">
+                <div class="category-header">
+                    <i class="fas fa-tools"></i>
+                    <h2>Development & Integration</h2>
+                </div>
+                <div class="skill-grid">
+                    <div class="skill-item">
+                        <div class="skill-icon">
+                            <i class="fab fa-microsoft"></i>
+                        </div>
+                        <div class="skill-info">
+                            <h4>Teams Integration</h4>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-skill="80"></div>
+                            </div>
+                            <p>Teams Bot, Workflow</p>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">
+                            <i class="fab fa-atlassian"></i>
+                        </div>
+                        <div class="skill-info">
+                            <h4>Jira Workflow</h4>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-skill="75"></div>
+                            </div>
+                            <p>Project Management APIs</p>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="skill-info">
+                            <h4>Agentic AI & MCP</h4>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-skill="80"></div>
+                            </div>
+                            <p>AI Agents, Model Context Protocol</p>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <div class="skill-info">
+                            <h4>Health Data Analysis</h4>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-skill="85"></div>
+                            </div>
+                            <p>Fitbit, PSG, Actigraphy, WebCardio</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="skill-category">
+                <div class="category-header">
+                    <i class="fas fa-database"></i>
+                    <h2>Databases</h2>
+                </div>
+                <div class="skill-grid">
+                    <div class="skill-item">
+                        <div class="skill-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="skill-info">
+                            <h4>MongoDB</h4>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-skill="70"></div>
+                            </div>
+                            <p>Intermediate</p>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="skill-info">
+                            <h4>PostgreSQL</h4>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-skill="75"></div>
+                            </div>
+                            <p>Intermediate</p>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">
+                            <i class="fab fa-aws"></i>
+                        </div>
+                        <div class="skill-info">
+                            <h4>DynamoDB</h4>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-skill="70"></div>
+                            </div>
+                            <p>NoSQL on AWS</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="skill-category">
+                <div class="category-header">
+                    <i class="fas fa-trophy"></i>
+                    <h2>Competition Achievements</h2>
+                </div>
+                <div class="achievement-grid">
+                    <div class="achievement-item">
+                        <div class="achievement-icon">
+                            <i class="fas fa-flag"></i>
+                        </div>
+                        <div class="achievement-info">
+                            <h4>Enigma CTF - Top 6</h4>
+                            <p>IIT Hyderabad (Feb 2025)</p>
+                        </div>
+                    </div>
+                    <div class="achievement-item">
+                        <div class="achievement-icon">
+                            <i class="fas fa-flag"></i>
+                        </div>
+                        <div class="achievement-info">
+                            <h4>Deccan CTF - Top 5</h4>
+                            <p>Among 500+ participants (Jan 2025)</p>
+                        </div>
+                    </div>
+                    <div class="achievement-item">
+                        <div class="achievement-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div class="achievement-info">
+                            <h4>HackIIIT Winner</h4>
+                            <p>Best MOYA Framework Contribution</p>
+                        </div>
+                    </div>
+                    <div class="achievement-item">
+                        <div class="achievement-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <div class="achievement-info">
+                            <h4>Startup-aid Finalist</h4>
+                            <p>E-cell Competition (Apr 2025)</p>
+                        </div>
+                    </div>
+                    <div class="achievement-item">
+                        <div class="achievement-icon">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <div class="achievement-info">
+                            <h4>UGEE Rank 114</h4>
+                            <p>National Level Achievement</p>
+                        </div>
+                    </div>
+                    <div class="achievement-item">
+                        <div class="achievement-icon">
+                            <i class="fas fa-running"></i>
+                        </div>
+                        <div class="achievement-info">
+                            <h4>Bangalore 10K Winner</h4>
+                            <p>First Place Under 18</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-    <!--end projects-->
+
     <!--start contact-->
-    <section id="Contact">
-        <a href="#Contact" class="arrow"><img src="arrow.png" alt="" class="icon1"></a>
-        <p class="heading-p">Get in touch</p>
-        <h1 class="heading">Contact me</h1>
+    <section id="Contact" class="cyber-section">
+        <div class="cyber-arrow">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="section-header">
+            <p class="heading-p cyber-subtitle">ESTABLISH.CONNECTION</p>
+            <h1 class="heading cyber-heading">CONTACT_PROTOCOL</h1>
+        </div>
         <div class="contact-container container">
-            <div class="email">
-                <img src="officialemail.png" alt="" class="icon1">
-                <a href="mailto:narasimha.pai@research.iiit.ac.in">
-                    <h5>Work mail</h5>
-                </a>
-            </div>
-            <div class="phone">
-                <img src="phone.png" alt="" class="icon1">
-                <a href="">
-                    <h5>960664****</h5>
-                </a>
-            </div>
-            <div class="pemail">
-                <img src="personalemail.png" alt="" class="icon1">
-                <a href="mailto:narsi.pai.narsi@gmail.com">
-                    <h5>Personal mail</h5>
-                </a>
+            <div class="contact-terminal">
+                <div class="terminal-header">
+                    <div class="terminal-buttons">
+                        <span class="btn-close"></span>
+                        <span class="btn-minimize"></span>
+                        <span class="btn-maximize"></span>
+                    </div>
+                    <span class="terminal-title">contact@secure:~$</span>
+                </div>
+                <div class="terminal-body">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope-open"></i>
+                        </div>
+                        <div class="contact-info">
+                            <span class="prompt">work@email:~$</span>
+                            <a href="mailto:narasimha.pai@research.iiit.ac.in" class="contact-link">
+                                narasimha.pai@research.iiit.ac.in
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="contact-info">
+                            <span class="prompt">phone@secure:~$</span>
+                            <span class="contact-link">960664****</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-at"></i>
+                        </div>
+                        <div class="contact-info">
+                            <span class="prompt">personal@email:~$</span>
+                            <a href="mailto:narsi.pai.narsi@gmail.com" class="contact-link">
+                                narsi.pai.narsi@gmail.com
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="terminal-line">
+                        <span class="prompt">user@contact:~$</span> <span class="cursor">█</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
     <!--end contact-->
-    <section id="Blog1">
-        <h1 class="heading"><center>Blogs</center></h1>
-        <div class="blog-container">
-            <div class="blog" id="blog1">
-                <h2><a href="blog1.html" target="_blank"><center>Blog 1</center></a></h2>
-                <p><center>Mythical lands</center></p>
-            </div>
-            <!-- Repeat for Blog 2 -->
+    <!--start blogs-->
+    <section id="Blog1" class="cyber-section">
+        <div class="section-header">
+            <h1 class="heading cyber-heading">
+                <span class="bracket">[</span>BLOG_ENTRIES<span class="bracket">]</span>
+            </h1>
         </div>
-    </section>
-    <section id="Blog2">
-        <h1 class="heading">Blogs</h1>
-        <div class="blog-container">
-            <div class="blog" id="blog2">
-                <h2><a href="blog2.html" target="_blank"><center>Blog 1</center></a></h2>
-                <p><center>Cinnamon buns</center></p>
+        <div class="blog-container container">
+            <div class="blog-card" id="blog1">
+                <div class="blog-header">
+                    <div class="blog-status">
+                        <span class="status-dot active"></span>
+                        <span>PUBLISHED</span>
+                    </div>
+                    <div class="blog-date">2025.01</div>
+                </div>
+                <div class="blog-content">
+                    <h2>
+                        <a href="blog1.html" target="_blank" class="blog-link">
+                            <i class="fas fa-city"></i>
+                            What Ra Sudeep - Bangalore Streets Chronicle
+                        </a>
+                    </h2>
+                    <p>A raw, unfiltered transcript capturing authentic Bangalore street culture and local dialect expressions.</p>
+                    <div class="blog-tags">
+                        <span class="tag">Street Culture</span>
+                        <span class="tag">Bangalore</span>
+                        <span class="tag">Cultural Archive</span>
+                    </div>
+                </div>
             </div>
-            <!-- Repeat for Blog 2 -->
+            
+            <div class="blog-card" id="blog2">
+                <div class="blog-header">
+                    <div class="blog-status">
+                        <span class="status-dot active"></span>
+                        <span>PUBLISHED</span>
+                    </div>
+                    <div class="blog-date">2024.11</div>
+                </div>
+                <div class="blog-content">
+                    <h2>
+                        <a href="blog2.html" target="_blank" class="blog-link">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            AWS & AI: Building Scalable ML Pipelines
+                        </a>
+                    </h2>
+                    <p>A comprehensive guide to deploying machine learning models at scale using AWS services and automation.</p>
+                    <div class="blog-tags">
+                        <span class="tag">AWS</span>
+                        <span class="tag">MLOps</span>
+                        <span class="tag">Automation</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <!--start footer-->
-    <footer>
-        <ul class="nav-links">
-            <li><a href="#About">About</a></li>
-            <li><a href="#Experience">Experience</a></li>
-            <li><a href="#Projects">Projects</a></li>
-            <li><a href="#Contact">Contact</a></li>
-        </ul>
-        <p>&copy; NJP 2024</p>
+    <footer class="cyber-footer">
+        <div class="footer-grid">
+            <div class="footer-section">
+                <h4>NAVIGATION.SYS</h4>
+                <ul class="footer-links">
+                    <li><a href="#About"><i class="fas fa-brain"></i> About</a></li>
+                    <li><a href="#Experience"><i class="fas fa-briefcase"></i> Experience</a></li>
+                    <li><a href="#Skills"><i class="fas fa-cogs"></i> Skills</a></li>
+                    <li><a href="#Contact"><i class="fas fa-terminal"></i> Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>SOCIAL.LINKS</h4>
+                <div class="footer-social">
+                    <a href="https://github.com/NJP6969" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/narasimha-pai-6234a2286/" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://discord.com/channels/@me" class="social-link">
+                        <i class="fab fa-discord"></i>
+                    </a>
+                    <a href="https://codeforces.com/profile/njp6969" class="social-link">
+                        <i class="fas fa-code"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>SYSTEM.INFO</h4>
+                <div class="system-stats">
+                    <div class="stat-line">
+                        <span>STATUS:</span> <span class="status-online">ONLINE</span>
+                    </div>
+                    <div class="stat-line">
+                        <span>UPTIME:</span> <span id="uptime">24/7</span>
+                    </div>
+                    <div class="stat-line">
+                        <span>VERSION:</span> <span>v2024.1.0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="copyright">
+                <span class="prompt">[NJP@cyberspace ~]$</span> 
+                Copyright &copy; 2024 | All systems operational
+            </div>
+        </div>
     </footer>
-    <br>
-    <br>
-    <br>
-    <br>
+    
     <script src="main.js"></script>
+    <script src="terminal.js"></script>
 </body>
 
 </html>

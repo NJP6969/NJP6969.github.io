@@ -1,23 +1,362 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What Ra Sudeep - Bangalore Streets | Narasimha Pai</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="blog.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Fira+Code:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+            color: #00d4ff;
+            font-family: 'Fira Code', monospace;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
 
+        .blog-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+            position: relative;
+        }
 
+        .blog-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
 
+        .blog-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #ff6b35;
+            text-shadow: 0 0 20px rgba(255, 107, 53, 0.5);
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
 
-<!-- blog.html -->
+        .blog-subtitle {
+            color: #7c3aed;
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .street-style-box {
+            background: rgba(0, 0, 0, 0.8);
+            border: 2px solid #ff6b35;
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+            position: relative;
+            box-shadow: 0 0 30px rgba(255, 107, 53, 0.3);
+        }
+
+        .street-style-box::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #ff6b35, #00d4ff, #7c3aed, #ff6b35);
+            border-radius: 15px;
+            z-index: -1;
+            animation: borderGlow 3s linear infinite;
+        }
+
+        @keyframes borderGlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .bangalore-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2rem;
+            gap: 1rem;
+        }
+
+        .bangalore-icon {
+            font-size: 2rem;
+            color: #ff6b35;
+        }
+
+        .content-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #e0e0e0;
+            text-align: justify;
+            padding: 1rem;
+            background: rgba(255, 107, 53, 0.1);
+            border-radius: 10px;
+            border-left: 4px solid #ff6b35;
+        }
+
+        .street-quote {
+            font-style: italic;
+            color: #00d4ff;
+            font-weight: bold;
+            text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+        }
+
+        .bangalore-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 2rem;
+            justify-content: center;
+        }
+
+        .tag {
+            background: linear-gradient(45deg, #ff6b35, #7c3aed);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 3rem;
+            padding: 1rem 2rem;
+            background: linear-gradient(45deg, #00d4ff, #7c3aed);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+        }
+
+        .back-link:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.5);
+        }
+
+        .audio-controls {
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .audio-btn {
+            background: linear-gradient(45deg, #ff6b35, #7c3aed);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 0 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 20px rgba(255, 107, 53, 0.3);
+        }
+
+        .audio-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255, 107, 53, 0.5);
+        }
+
+        .audio-status {
+            margin-top: 1rem;
+            color: #00d4ff;
+            font-size: 0.9rem;
+            font-style: italic;
+        }
+
+        .warning-note {
+            background: rgba(255, 107, 53, 0.2);
+            border: 1px solid #ff6b35;
+            border-radius: 10px;
+            padding: 1rem;
+            margin: 2rem 0;
+            text-align: center;
+            color: #ff6b35;
+            font-weight: bold;
+        }
+
+        .street-context {
+            background: rgba(124, 58, 237, 0.2);
+            border: 1px solid #7c3aed;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            color: #7c3aed;
+        }
+
+        @media (max-width: 768px) {
+            .blog-container {
+                padding: 1rem;
+            }
+            
+            .blog-title {
+                font-size: 2rem;
+            }
+            
+            .content-text {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
 <body>
-    <p>Beneath the shimmering surface of a turquoise lagoon, an ancient city slumbered. Coral castles, draped in vibrant seaweed, housed schools of fish in every color imaginable. Ethereal jellyfish pulsed with bioluminescent light, illuminating the silent streets patrolled by graceful manta rays. In the central plaza, a giant clam stood sentry, its shell adorned with intricate carvings that whispered secrets of the deep. A lone mermaid, her scales shimmering like pearls, glided through the ruins, searching for remnants of a forgotten civilization. Above, on the sun-drenched shore, a lone palm tree swayed in the gentle breeze, its fronds rustling with the whispers of the wind, carrying tales of the wonders hidden beneath the waves.</p>
-    <div class="blog" id="Blog1">
-        <h2>Blog 1</h2>
-        <p class="like-counter">0 likes</p>
-        <button class="like-button">Like</button>
-        <div class="comments-section">
-            <!-- Comments will be added here -->
+    <div class="blog-container">
+        <div class="blog-header">
+            <h1 class="blog-title">What Ra Sudeep</h1>
+            <p class="blog-subtitle">A Raw Bangalore Street Chronicle</p>
+            <div class="audio-controls">
+                <button id="playButton" class="audio-btn">
+                    <i class="fas fa-play"></i> Play Audio
+                </button>
+                <button id="pauseButton" class="audio-btn" style="display: none;">
+                    <i class="fas fa-pause"></i> Pause
+                </button>
+                <div class="audio-status" id="audioStatus">🔊 Playing authentic Bangalore recording...</div>
+            </div>
+            <audio id="sudeepAudio" preload="auto" style="display: none;">
+                <source src="sudeep.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
         </div>
-        <input type="text" class="comment-input" placeholder="Add a comment">
-        <button class="comment-button">Comment</button>
-    </div>
-    <script src="blog.js"></script>
-</body>
 
+        <div class="street-style-box">
+            <div class="bangalore-header">
+                <i class="fas fa-city bangalore-icon"></i>
+                <h2 style="color: #ff6b35; margin: 0; font-family: 'Orbitron', monospace;">BANGALORE STREETS TRANSCRIPT</h2>
+                <i class="fas fa-motorcycle bangalore-icon"></i>
+            </div>
+
+            <div class="content-text">
+                <span class="street-quote">"What ra Sudeep too much cock you are showing bro."</span> Frankly I'll tell you Sudeep you are showing too much cock bro you come to Malleshwaram area I'll pop you with my gang I said you once and I'm saying you once more time ra Sudeep I'll pop you if you show too much cock to me again, you and that fucker friend vi no, I'll pop both of you ra I have one gangster on my side ra Reddy anna I'll pop you.
+                <br><br>
+                <span class="street-quote">"What bro Sudeep too much cock you are showing second time uh."</span> Frankly speaking where you got second cock from masala (inaudible) again. What you putting ice in my girl in the bar your body will leave in my car ra Sudeep you put ice on her again I will pluck that ice and keep in your hand ra Sudeep too much cock don't show I will pop you. I'm in my Reddy anna gangster anna's house ra.
+                <br><br>
+                <span class="street-quote">"What man Sudeep and whose that fellow fucker friend vi"</span> what man what you showing cock buying phone from apple I will beat you with one chappal man bastard don't act too much I know which and all localities your wife is going to actually (inaudible) ma I know that one. I will cut her into pieces and put all across Bengaluru then you go search for her like collecting coins in temple run okay ma after long time all this matters has made me drink alcohol ma I don't like it okay 10 words you want to put if in your caption means 10 bodies I can put in front of your house okay.
+                <br><br>
+                <span class="street-quote">Ahh punchline.</span> See Mavi I'm very calm fellow collected fellow just one thing you remember ladies blouse and politicians house you should not go nearby.
+            </div>
+
+            <div class="warning-note">
+                <i class="fas fa-exclamation-triangle"></i>
+                <strong>Cultural Archive:</strong> This content represents authentic street language and expressions from Bangalore's local culture, preserved for documentary purposes.
+            </div>
+        </div>
+
+        <div class="bangalore-tags">
+            <span class="tag"><i class="fas fa-map-marker-alt"></i> Malleshwaram</span>
+            <span class="tag"><i class="fas fa-city"></i> Bangalore</span>
+            <span class="tag"><i class="fas fa-comments"></i> Street Culture</span>
+            <span class="tag"><i class="fas fa-microphone"></i> Raw Audio</span>
+            <span class="tag"><i class="fas fa-archive"></i> Cultural Archive</span>
+        </div>
+
+        <div style="text-align: center;">
+            <a href="index.html" class="back-link">
+                <i class="fas fa-arrow-left"></i> Back to Portfolio
+            </a>
+        </div>
+    </div>
+
+    <script src="blog.js"></script>
+    <script>
+        // MP3 Audio Player for authentic Bangalore recording
+        class SudeepAudioPlayer {
+            constructor() {
+                this.audio = document.getElementById('sudeepAudio');
+                this.playButton = document.getElementById('playButton');
+                this.pauseButton = document.getElementById('pauseButton');
+                this.audioStatus = document.getElementById('audioStatus');
+                
+                this.initializeControls();
+                this.autoPlay();
+            }
+
+            initializeControls() {
+                // Set volume to maximum
+                this.audio.volume = 1.0;
+                
+                this.playButton.addEventListener('click', () => this.play());
+                this.pauseButton.addEventListener('click', () => this.pause());
+                
+                // Audio event listeners
+                this.audio.addEventListener('play', () => {
+                    this.playButton.style.display = 'none';
+                    this.pauseButton.style.display = 'inline-block';
+                    this.audioStatus.textContent = '🎵 Playing authentic Bangalore street recording...';
+                });
+
+                this.audio.addEventListener('pause', () => {
+                    this.playButton.style.display = 'inline-block';
+                    this.pauseButton.style.display = 'none';
+                    this.audioStatus.textContent = 'Audio paused. Click play to continue.';
+                });
+
+                this.audio.addEventListener('ended', () => {
+                    this.playButton.style.display = 'inline-block';
+                    this.pauseButton.style.display = 'none';
+                    this.audioStatus.textContent = 'Recording finished. Click play to listen again.';
+                });
+
+                this.audio.addEventListener('error', () => {
+                    this.audioStatus.textContent = 'Error loading audio file. Please check if sudeep.mp3 exists.';
+                    this.playButton.style.display = 'inline-block';
+                    this.pauseButton.style.display = 'none';
+                });
+
+                this.audio.addEventListener('loadstart', () => {
+                    this.audioStatus.textContent = 'Loading authentic Bangalore recording...';
+                });
+
+                this.audio.addEventListener('canplay', () => {
+                    this.audioStatus.textContent = '🔊 Ready to play! Auto-starting in 2 seconds...';
+                });
+            }
+
+            play() {
+                this.audio.currentTime = 0; // Start from beginning
+                this.audio.play().catch(error => {
+                    console.error('Audio play failed:', error);
+                    this.audioStatus.textContent = 'Click play to start (browser autoplay policy)';
+                });
+            }
+
+            pause() {
+                this.audio.pause();
+            }
+
+            autoPlay() {
+                // Auto-play after page loads with delay for browser autoplay policies
+                setTimeout(() => {
+                    this.audio.play().catch(error => {
+                        console.log('Autoplay prevented by browser policy:', error);
+                        this.audioStatus.textContent = '🎵 Click play to hear authentic Bangalore recording';
+                        this.playButton.style.display = 'inline-block';
+                        this.pauseButton.style.display = 'none';
+                    });
+                }, 2000);
+            }
+        }
+
+        // Initialize when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            new SudeepAudioPlayer();
+        });
+    </script>
+</body>
 </html>
